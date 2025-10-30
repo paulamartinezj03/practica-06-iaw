@@ -22,4 +22,4 @@ mysql -u root -e "CREATE DATABASE $DB_NAME";
 mysql -u root -e "DROP USER IF EXISTS '$DB_USER'@'%';";
 mysql -u root -e "CREATE USER $DB_USER@'%' IDENTIFIED BY '$DB_PASSWORD'";
 #Le asignamos privilegios de nuestra base de datos
-mysql -u root -e "GRANT ALL PRIVILEGES ON $DB_NAME.* TO $DB_USER@'%'";
+mysql -u root -e "GRANT ALL PRIVILEGES ON $DB_NAME.* TO $DB_USER@'$IP_CLIENTE_MYSQL'";
