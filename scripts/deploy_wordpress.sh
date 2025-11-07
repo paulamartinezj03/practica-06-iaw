@@ -15,8 +15,8 @@ unzip /tmp/latest.zip -d /tmp
 rm -rf /var/www/html/*
 mv /tmp/wordpress/* /var/www/html/
 #Creamos una base de datos de ejemplo
-#mysql -u root -e "DROP DATABASE IF EXISTS $DB_NAME"
-#mysql -u root -e "CREATE DATABASE $DB_NAME";
+mysql -u root -e "DROP DATABASE IF EXISTS $DB_NAME"
+mysql -u root -e "CREATE DATABASE $DB_NAME";
 
 #Creamos un usuario y contraseña para la base de datos
 mysql -u root -e "DROP USER IF EXISTS '$DB_USER'@'$IP_CLIENTE_MYSQL';";
