@@ -36,8 +36,8 @@ sed -i "s/password_here/$DB_PASSWORD/" /var/www/html/wordpress/wp-config.php
 sed -i "s/localhost/$DB_HOST/" /var/www/html/wordpress/wp-config.php
 
 # Configuramos las variables WP_SITEURL y WP_HOME del archivo de configuración wp-config.php.
-sed -i "/DB_COLLATE/a define('WP_SITEURL', 'https://$CERTIFICATE_DOMAIN/wordpress');" /var/www/html/wordpress/wp-config.php
-sed -i "/WP_SITEURL/a define('WP_HOME', 'https://$CERTIFICATE_DOMAIN');" /var/www/html/wordpress/wp-config.php
+sed -i "/DB_COLLATE/a define('WP_SITEURL', 'https://$CERTBOT_DOMAIN/wordpress');" /var/www/html/wordpress/wp-config.php
+sed -i "/WP_SITEURL/a define('WP_HOME', 'https://$CERTBOT_DOMAIN');" /var/www/html/wordpress/wp-config.php
 
 # Copiamos el archivo /var/www/html/wordpress/index.php a /var/www/html.
 cp /var/www/html/wordpress/index.php /var/www/html
